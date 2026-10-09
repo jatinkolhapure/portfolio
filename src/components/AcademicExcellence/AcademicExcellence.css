@@ -1,0 +1,348 @@
+.academics-timeline-section {
+  position: relative;
+  background-color: transparent;
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+  overflow: hidden;
+}
+
+.academics-header-epic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.epic-title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.epic-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+/* Timeline Container */
+.epic-timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Center Timeline Line */
+.epic-timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  z-index: 0;
+}
+
+[data-theme='light'] .epic-timeline-line {
+  background: #cbd5e1;
+}
+
+.epic-timeline-line-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(59, 130, 246, 0.4), rgba(250, 204, 21, 0.4), transparent);
+  filter: blur(2px);
+}
+
+[data-theme='light'] .epic-timeline-line-glow {
+  background: linear-gradient(180deg, transparent, rgba(37, 99, 235, 0.25), transparent);
+  filter: blur(1px);
+}
+
+/* Timeline Rows */
+.epic-timeline-row {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 4rem;
+  width: 50%;
+  padding-right: 3rem;
+  z-index: 1;
+}
+
+.epic-timeline-row.right {
+  margin-left: 50%;
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 3rem;
+}
+
+/* Timeline Nodes */
+.epic-timeline-node {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.epic-timeline-row.right .epic-timeline-node {
+  right: auto;
+  left: -10px;
+}
+
+.node-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3b82f6;
+}
+
+.blue-node { border-color: rgba(59, 130, 246, 0.6); }
+.blue-node .node-inner { background: #3b82f6; box-shadow: 0 0 10px rgba(59, 130, 246, 0.8); }
+
+.gold-node { border-color: rgba(245, 158, 11, 0.6); }
+.gold-node .node-inner { background: #f59e0b; box-shadow: 0 0 10px rgba(245, 158, 11, 0.8); }
+
+.neutral-node { border-color: var(--border-default); }
+.neutral-node .node-inner { background: var(--text-tertiary); }
+
+[data-theme='light'] .blue-node { border-color: #2563eb; }
+[data-theme='light'] .blue-node .node-inner { background: #2563eb; box-shadow: 0 0 8px rgba(37, 99, 235, 0.5); }
+
+[data-theme='light'] .gold-node { border-color: #d97706; }
+[data-theme='light'] .gold-node .node-inner { background: #d97706; box-shadow: 0 0 8px rgba(217, 119, 6, 0.5); }
+
+[data-theme='light'] .neutral-node { border-color: #94a3b8; }
+[data-theme='light'] .neutral-node .node-inner { background: #64748b; }
+
+/* Epic Cards */
+.epic-glass-card {
+  width: 100%;
+  max-width: 450px;
+  background: var(--surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.epic-glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.blue-glass:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.gold-glass:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.neutral-glass:hover {
+  border-color: var(--border-highlight);
+}
+
+[data-theme='light'] .epic-glass-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 2px 8px -2px rgba(15, 23, 42, 0.03);
+}
+
+[data-theme='light'] .epic-glass-card:hover {
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.1), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme='light'] .blue-glass:hover {
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+[data-theme='light'] .gold-glass:hover {
+  border-color: rgba(217, 119, 6, 0.35);
+}
+
+/* Badges */
+.epic-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.badge-blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.badge-gold {
+  background: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+[data-theme='light'] .badge-blue {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+[data-theme='light'] .badge-gold {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+/* Typography Inside Card */
+.epic-degree {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin: 0 0 0.5rem 0;
+}
+
+.epic-institution {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+.epic-score-block {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.epic-score-value {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.text-blue {
+  background: linear-gradient(135deg, #93c5fd, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme='light'] .text-blue {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold {
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme='light'] .text-gold {
+  background: linear-gradient(135deg, #b45309, #d97706);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-neutral {
+  color: var(--text-primary);
+}
+
+.epic-score-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.epic-details {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.epic-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1rem;
+}
+
+.epic-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .epic-timeline-line {
+    left: 20px;
+  }
+  
+  .epic-timeline-line-glow {
+    left: 20px;
+  }
+  
+  .epic-timeline-row {
+    width: 100%;
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+    justify-content: flex-start;
+  }
+  
+  .epic-timeline-row.right {
+    margin-left: 0;
+  }
+  
+  .epic-timeline-node {
+    left: 10px !important;
+    right: auto !important;
+  }
+  
+  .epic-glass-card {
+    max-width: 100%;
+  }
+}

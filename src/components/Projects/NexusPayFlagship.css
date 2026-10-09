@@ -1,0 +1,223 @@
+.nexuspay-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid rgba(59, 130, 246, 0.28);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.nexuspay-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+}
+
+.nexuspay-card:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55), 0 0 24px rgba(59, 130, 246, 0.1);
+}
+
+.nexuspay-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.nexuspay-meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nexuspay-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nexuspay-platform-id {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+}
+
+.nexuspay-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.nexuspay-title {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.nexuspay-tagline {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--accent-hover);
+}
+
+.nexuspay-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 900px;
+}
+
+/* Signals Grid */
+.nexuspay-signals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background: rgba(11, 13, 16, 0.65);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.nexuspay-signal-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-right: 1px solid var(--border-subtle);
+  padding-right: 1rem;
+}
+
+.nexuspay-signal-box:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.signal-metric {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.signal-label {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Strengths Grid */
+.nexuspay-strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.strength-item {
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.strength-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: var(--accent-subtle);
+  color: var(--accent-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.strength-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.strength-desc {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+/* Tech List */
+.nexuspay-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Actions */
+.nexuspay-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .nexuspay-card {
+    padding: 1.75rem;
+  }
+
+  .nexuspay-signals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nexuspay-signal-box:nth-child(2) {
+    border-right: none;
+  }
+
+  .nexuspay-strengths-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .nexuspay-signals-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .nexuspay-signal-box {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.75rem;
+  }
+
+  .nexuspay-signal-box:last-child {
+    border-bottom: none;
+  }
+
+  .nexuspay-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nexuspay-actions .btn {
+    width: 100%;
+  }
+}

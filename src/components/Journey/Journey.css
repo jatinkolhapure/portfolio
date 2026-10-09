@@ -1,0 +1,118 @@
+.journey-section {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.journey-timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.timeline-node {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-phase {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--accent-hover);
+  z-index: 1;
+  transition: all var(--transition-fast);
+}
+
+.timeline-node:hover .timeline-phase {
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+  box-shadow: 0 0 14px var(--accent-glow);
+}
+
+.timeline-line {
+  flex: 1;
+  width: 2px;
+  background: var(--border-subtle);
+  margin: 6px 0;
+}
+
+.timeline-node:last-child .timeline-line {
+  display: none;
+}
+
+.timeline-content {
+  padding: 1.5rem 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.75rem;
+  transition: all var(--transition-normal);
+}
+
+.timeline-content:hover {
+  border-color: var(--border-default);
+  transform: translateX(4px);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .timeline-node {
+    grid-template-columns: 48px 1fr;
+    gap: 1rem;
+  }
+
+  .timeline-phase {
+    width: 36px;
+    height: 36px;
+    font-size: 0.75rem;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+  }
+}

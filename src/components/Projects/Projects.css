@@ -1,0 +1,27 @@
+.projects-section {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.projects-showcase-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.projects-flagship-tier {
+  width: 100%;
+}
+
+.projects-secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .projects-secondary-grid {
+    grid-template-columns: 1fr;
+  }
+}

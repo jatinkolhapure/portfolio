@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient: Deep Midnight Sapphire -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Glowing Rim Gradient -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <!-- Radial Core Glow -->
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#3B82F6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Vibrant Electric J Gradient -->
+    <linearGradient id="jGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <!-- High-Contrast Crisp K Gradient -->
+    <linearGradient id="kGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Base with Deep Luxury Slate -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Internal Glow Field -->
+  <circle cx="32" cy="32" r="24" fill="url(#coreGlow)"/>
+
+  <!-- High-Precision Accent Rim -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" fill="none" stroke="url(#rimGrad)" stroke-width="2.5" opacity="0.85"/>
+
+  <!-- Razor-Sharp Bold Monogram (Strokes: 7.5px with Smooth Caps & Joints) -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- J: Distinct Electric Neon Cyan/Blue -->
+    <path d="M 26 17 L 26 38 C 26 43.5 22 47.5 16 47.5 C 11.5 47.5 9 44.5 9 40" 
+          fill="none" 
+          stroke="url(#jGrad)" 
+          stroke-width="7.5"/>
+
+    <!-- K: Pure Brilliant Crisp White -->
+    <path d="M 37 17 L 37 47.5" 
+          fill="none" 
+          stroke="url(#kGrad)" 
+          stroke-width="7.5"/>
+    <path d="M 52 17 L 37 32 L 53 47.5" 
+          fill="none" 
+          stroke="url(#kGrad)" 
+          stroke-width="7.5"/>
+  </g>
+</svg>

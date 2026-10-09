@@ -1,0 +1,392 @@
+/* Highly Refined Minimalist Hero */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--header-height);
+  background-color: var(--color-bg); /* Preserves global dark aesthetic */
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--spacing-16);
+  align-items: flex-start; /* Aligns image to top */
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Tagline */
+.hero-tagline {
+  margin-bottom: 20px;
+}
+
+.tagline-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #60a5fa; /* Professional blue */
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 100px;
+}
+
+[data-theme='light'] .tagline-text {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* Typography Hierarchy */
+.hero-title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin: 0 0 24px 0;
+}
+
+.text-highlight {
+  color: #3b82f6; /* Single, restrained, sophisticated blue accent */
+  white-space: nowrap;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: 580px;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  white-space: pre-wrap; /* Ensures word wrap is natural without collapsing spaces */
+}
+
+.text-strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Precise Product UI CTAs */
+.hero-actions-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.btn-lg {
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-lg:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn-outline:active {
+  transform: scale(0.98);
+}
+
+[data-theme='light'] .btn-outline {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .btn-outline:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  color: #020617;
+}
+
+/* Subtle Hover Micro-interactions */
+.btn-icon-right {
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.btn-primary:hover .btn-icon-right {
+  transform: translateX(4px);
+}
+
+.btn-icon-bounce {
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.btn-outline:hover .btn-icon-bounce {
+  transform: translateY(2px);
+}
+
+/* Bottom Section (Socials & Tech Stack) */
+.hero-bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+}
+
+.hero-social-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-social-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.social-icon-svg {
+  transition: fill 0.3s ease, color 0.3s ease;
+}
+
+.social-link.brand-github:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+.social-link.brand-github:hover .social-icon-svg {
+  color: var(--bg-base);
+  fill: var(--bg-base);
+}
+
+.social-link.brand-linkedin {
+  color: #0A66C2; /* Native LinkedIn Blue */
+}
+.social-link.brand-linkedin:hover {
+  background-color: #0A66C2;
+  border-color: #0A66C2;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+.social-link.brand-linkedin:hover .social-icon-svg {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.social-link.brand-leetcode {
+  color: #FFA116; /* Native LeetCode Orange */
+}
+.social-link.brand-leetcode:hover {
+  background-color: #FFA116;
+  border-color: #FFA116;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 161, 22, 0.3);
+}
+.social-link.brand-leetcode:hover .social-icon-svg {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.social-link:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Shared Section Title */
+.section-title {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+/* Tech Stack Icons */
+.hero-tech-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tech-icons-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.tech-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: translateY(-2px) scale(1.1);
+}
+
+.tech-icon-invert {
+  filter: invert(1) brightness(1.5);
+}
+
+/* Refined Organic Image Presentation */
+.hero-visual {
+  display: flex;
+  justify-content: flex-end; /* Balances the composition on large screens */
+  align-items: flex-start;
+  margin-top: 10px; /* Fine-tune alignment with the heading */
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 340px; /* Medium fit, not too big */
+  aspect-ratio: 1/1; /* Perfect circle */
+  border-radius: 50%; /* Circular shape */
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5); 
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Slightly thicker border for premium look */
+  position: relative;
+  background-color: var(--color-surface);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.profile-container:hover .profile-image {
+  transform: scale(1.02); /* Very minimal scale for high-end feel */
+}
+
+[data-theme='light'] .social-link {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  color: #0f172a;
+}
+
+[data-theme='light'] .social-link.brand-github:hover {
+  background-color: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+}
+
+[data-theme='light'] .social-link.brand-github:hover .social-icon-svg {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+[data-theme='light'] .profile-container {
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.06);
+  border: 4px solid #ffffff;
+}
+
+[data-theme='light'] .tech-icon-invert {
+  filter: brightness(0.2);
+}
+
+/* Intelligent Responsive Recomposition */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 48px;
+  }
+
+  .hero-content {
+    order: 1; /* Headline first */
+  }
+  
+  .hero-visual {
+    order: 2; /* Image last */
+    justify-content: center; /* Center the image on mobile/tablet */
+  }
+  
+  .profile-container {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(2.25rem, 9vw, 3rem);
+  }
+  
+  .hero-actions-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-lg {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-bottom-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .tech-icons-row {
+    justify-content: center;
+  }
+}
+
+/* Respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  .profile-image, .btn-lg, .social-link, .btn-icon-right, .btn-icon-bounce {
+    transition: none !important;
+  }
+}
