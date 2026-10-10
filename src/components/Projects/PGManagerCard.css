@@ -165,3 +165,33 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 640px) {
+  .client-project-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .client-project-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-project-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .client-project-title {
+    font-size: 1.35rem;
+  }
+
+  .client-project-desc {
+    font-size: 0.9rem;
+  }
+
+  .client-context-box {
+    padding: 0.85rem 1rem;
+  }
+}
+

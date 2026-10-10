@@ -960,3 +960,129 @@
   border-color: var(--accent-border);
   color: var(--accent);
 }
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (<= 640px and <= 480px)
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .cert-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .cert-mode-toggle {
+    width: 100%;
+    display: flex;
+  }
+
+  .cert-toggle-tab {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .cert-dossier-modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .cert-dossier-panel {
+    max-height: 94vh;
+    border-radius: var(--radius-lg);
+  }
+
+  .cert-dossier-viewer {
+    padding: 1.25rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .cert-dossier-img {
+    max-height: 40vh;
+  }
+
+  .cert-dossier-sheet {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cert-dossier-close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .cert-table-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cert-table-data {
+    min-width: 620px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-doc-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .cert-doc-stage {
+    height: 180px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .cert-doc-mat,
+  .cert-doc-img {
+    max-height: 155px;
+  }
+
+  .cert-doc-title {
+    font-size: 1.08rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cert-id-badge-bar {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .cert-doc-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .cert-btn-official {
+    grid-column: span 2;
+    justify-content: center;
+  }
+
+  .cert-btn-drive,
+  .cert-btn-inspect {
+    justify-content: center;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.78rem;
+  }
+
+  .cert-dossier-modal-backdrop {
+    padding: 0.5rem;
+  }
+
+  .cert-dossier-viewer {
+    padding: 0.85rem;
+  }
+
+  .cert-dossier-img {
+    max-height: 35vh;
+  }
+
+  .cert-dossier-sheet {
+    padding: 1.25rem 0.95rem;
+  }
+
+  .dossier-title {
+    font-size: 1.2rem;
+  }
+}
+

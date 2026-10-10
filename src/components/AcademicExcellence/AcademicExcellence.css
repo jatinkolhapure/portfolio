@@ -318,6 +318,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .academics-header-epic {
+    margin-bottom: 3.5rem;
+  }
+
   .epic-timeline-line {
     left: 20px;
   }
@@ -331,6 +335,7 @@
     padding-left: 60px !important;
     padding-right: 0 !important;
     justify-content: flex-start;
+    margin-bottom: 2.75rem;
   }
   
   .epic-timeline-row.right {
@@ -344,5 +349,61 @@
   
   .epic-glass-card {
     max-width: 100%;
+    padding: 1.85rem;
   }
 }
+
+@media (max-width: 480px) {
+  .academics-header-epic {
+    margin-bottom: 2.25rem;
+  }
+
+  .epic-title {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .epic-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .epic-timeline-line,
+  .epic-timeline-line-glow {
+    left: 14px;
+  }
+
+  .epic-timeline-node {
+    left: 4px !important;
+    width: 18px;
+    height: 18px;
+  }
+
+  .epic-timeline-row {
+    padding-left: 36px !important;
+    margin-bottom: 2rem;
+  }
+
+  .epic-glass-card {
+    padding: 1.25rem 1rem;
+    border-radius: 16px;
+  }
+
+  .epic-card-score {
+    font-size: 1.5rem;
+  }
+
+  .epic-degree {
+    font-size: 1.05rem;
+  }
+
+  .epic-institution {
+    font-size: 0.82rem;
+  }
+
+  .epic-details {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+}
+

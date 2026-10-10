@@ -299,6 +299,39 @@
 }
 
 @media (max-width: 640px) {
+  .engineering-section {
+    padding: 3.5rem 0;
+  }
+
+  .matrix-header {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .matrix-filter-bar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.25rem;
+  }
+
+  .matrix-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .matrix-filter-pill {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.78rem;
+    flex-shrink: 0;
+  }
+
+  .matrix-spec-row {
+    padding: 1.25rem 0.25rem;
+    gap: 1.15rem;
+  }
+
   .matrix-footer-strip {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -306,3 +339,22 @@
     padding: 1rem;
   }
 }
+
+@media (max-width: 440px) {
+  .matrix-footer-strip {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .tech-capsule {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .concept-tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+

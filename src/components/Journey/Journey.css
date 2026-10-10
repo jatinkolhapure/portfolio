@@ -116,3 +116,29 @@
     padding: 1.25rem;
   }
 }
+
+@media (max-width: 480px) {
+  .timeline-node {
+    grid-template-columns: 36px 1fr;
+    gap: 0.75rem;
+  }
+
+  .timeline-phase {
+    width: 32px;
+    height: 32px;
+    font-size: 0.7rem;
+  }
+
+  .timeline-content {
+    padding: 1.1rem 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .timeline-title {
+    font-size: 1.05rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.86rem;
+  }
+}

@@ -168,9 +168,38 @@
   }
 }
 
+@media (max-width: 640px) {
+  .studenthub-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .studenthub-title {
+    font-size: 1.5rem;
+  }
+
+  .studenthub-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 480px) {
+  .studenthub-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .studenthub-title {
+    font-size: 1.35rem;
+  }
+
+  .studenthub-desc {
+    font-size: 0.9rem;
+  }
+
   .studenthub-signals {
     grid-template-columns: 1fr;
+    padding: 0.85rem;
   }
 
   .studenthub-signal-box {
@@ -183,3 +212,4 @@
     border-bottom: none;
   }
 }
+

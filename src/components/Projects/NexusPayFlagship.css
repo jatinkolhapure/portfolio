@@ -219,5 +219,39 @@
 
   .nexuspay-actions .btn {
     width: 100%;
+    justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .nexuspay-card {
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .nexuspay-title {
+    font-size: clamp(1.65rem, 6.5vw, 2.1rem);
+  }
+
+  .nexuspay-tagline {
+    font-size: 0.95rem;
+  }
+
+  .nexuspay-description {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .nexuspay-signals-grid {
+    padding: 1rem 0.85rem;
+  }
+
+  .signal-metric {
+    font-size: 1.3rem;
+  }
+
+  .nexuspay-tech-list {
+    gap: 0.35rem;
+  }
+}
+

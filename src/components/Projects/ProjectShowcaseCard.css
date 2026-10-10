@@ -237,6 +237,37 @@
   }
 }
 
+@media (max-width: 480px) {
+  .project-content-section {
+    padding: 18px 14px;
+    gap: 16px;
+  }
+  
+  .project-title {
+    font-size: 1.45rem;
+  }
+  
+  .project-tagline {
+    font-size: 0.95rem;
+  }
+  
+  .project-description {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .project-badge {
+    top: 14px;
+    left: 14px;
+    padding: 4px 10px;
+    font-size: 0.65rem;
+  }
+
+  .project-showcase-card {
+    margin-bottom: 2rem;
+  }
+}
+
 /* Desktop Split Layout */
 @media (min-width: 1024px) {
   .project-showcase-inner {
