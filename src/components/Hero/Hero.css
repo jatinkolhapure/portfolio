@@ -347,28 +347,31 @@
 @media (max-width: 1024px) {
   .hero-section {
     min-height: auto;
-    padding-top: calc(var(--nav-height) + 2.5rem);
-    padding-bottom: 4rem;
+    padding-top: calc(var(--nav-height) + 2rem);
+    padding-bottom: 3.5rem;
   }
 
   .hero-container {
     grid-template-columns: 1fr;
     text-align: left;
-    gap: 36px;
+    gap: 28px;
+  }
+
+  .hero-visual {
+    order: 1; /* Profile photo first on mobile/tablet */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
   }
 
   .hero-content {
-    order: 1; /* Headline first */
-  }
-  
-  .hero-visual {
-    order: 2; /* Image after on tablet/mobile */
-    justify-content: center;
-    margin-top: 0;
+    order: 2; /* Headline, description, and actions continue after photo */
+    width: 100%;
   }
   
   .profile-container {
-    max-width: 280px;
+    max-width: 250px;
   }
 }
 

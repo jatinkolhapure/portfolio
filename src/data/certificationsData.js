@@ -28,7 +28,7 @@ export const certificationsData = [
     accentColor: "#F59E0B",
     signatories: "Shradha Khapra (Co-Founder, Apna College)",
     image: "/certificates/dsa-java.png",
-    driveUrl: "https://drive.google.com/file/d/1NdLcPLr-8I8r35PikdRFJQaNvEl9iwUZ/view?usp=drive_link",
+    driveUrl: "https://drive.google.com/file/d/1_Odhu0dqvW-tIpSTO9KHKls6gjgLPpUh/view?usp=drive_link",
     verifyUrl: null,
     description: "Core Java data structures and algorithmic problem solving, covering Arrays, Strings, Sliding Window, Stacks, Queues, HashMaps, HashSets, and PriorityQueues with Big-O time and space complexity.",
     skills: ["Core Java", "Arrays & Strings", "Sliding Window", "Stack & Queue", "HashMap & HashSet", "PriorityQueue"]
